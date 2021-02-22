@@ -55,7 +55,7 @@ namespace API
 
             var fromBase64String = Convert.FromBase64String(authHeaderValue.Parameter);
 
-            var credentials = Encoding.UTF8.GetString(fromBase64String).Split(':');
+            var credentials = Encoding.UTF8.GetString(fromBase64String).Split(':', 2);
 
             if (credentials.Length != 2)
             {
